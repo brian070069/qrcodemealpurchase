@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { AuthenticationContext } from "../context/authContext.";
 import { CartContext } from "../context/CartContext";
-import { ACTION } from "../pages/Home/HomeReducer";
+import { ACTION } from "../Pages/Home/HomeReducer";
 import axios from "axios";
 import { userUrl } from "../services/BaseUrls";
 import { getToken } from "../libs/getToken";
