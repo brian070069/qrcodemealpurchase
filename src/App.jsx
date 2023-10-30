@@ -11,12 +11,12 @@ const Register = React.lazy(() => import("./Pages/SignUp/Register"));
 const Login = React.lazy(() => import("./Pages/SingIn/Login"));
 const ForgotPassword = React.lazy(() => import("./pages/resetpassword/Index"));
 const Cart = React.lazy(() => import("./Pages/Cart/Cart"));
-const MealHistory = React.lazy(() => import("./pages/Mealhistory/MealHistory"));
+const MealHistory = React.lazy(() => import("./Pages/Mealhistory/MealHistory"));
 const OrderDetails = React.lazy(() =>
-  import("./pages/Mealhistory/OrderedFoodDetails/App")
+  import("./Pages/Mealhistory/OrderedFoodDetails/App")
 );
-const Profile = React.lazy(() => import("./pages/Profile/Profile"));
-const HomeApp = React.lazy(() => import("./pages/Home/Home"));
+const Profile = React.lazy(() => import("./Pages/Profile/Profile"));
+const HomeApp = React.lazy(() => import("./Pages/Home/Home"));
 const ChangePassword = React.lazy(() =>
   import("./Pages/Profile/changePassword/ChangePassword")
 );
@@ -26,7 +26,7 @@ const AddNewItem = React.lazy(() =>
 );
 const Admin = React.lazy(() => import("./Pages/Managment/Admin/Admin"));
 const UpdateItems = React.lazy(() =>
-  import("./pages/Managment/Staff/updateItems/updateExistingFood/UpdateItems")
+  import("./Pages/Managment/Staff/updateItems/updateExistingFood/UpdateItems")
 );
 const UpdateOneItem = React.lazy(() =>
   import(
