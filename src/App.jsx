@@ -5,7 +5,7 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FallBack from "./components/FallBack";
-
+consol.log("hello");
 //pages
 const Register = React.lazy(() => import("./Pages/SignUp/Register"));
 const Login = React.lazy(() => import("./Pages/SingIn/Login"));
