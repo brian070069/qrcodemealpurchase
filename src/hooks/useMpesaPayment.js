@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import { ACTION } from "../pages/Home/HomeReducer";
+import { ACTION } from "../Pages/Home/HomeReducer";
 import { mpesaBaseUrl } from "../services/BaseUrls";
 import { getToken } from "../libs/getToken";
 

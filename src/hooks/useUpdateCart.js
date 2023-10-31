@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { AuthenticationContext } from "../context/authContext.";
-import { ACTION } from "../pages/Home/HomeReducer";
+import { ACTION } from "../Pages/Home/HomeReducer";
 // import { useClearCartError } from "./useClearCartError";
 import axios from "axios";
 import { cartBaseUrl } from "../services/BaseUrls";
