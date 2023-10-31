@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { ACTION } from "../pages/Home/HomeReducer";
+import { ACTION } from "../Pages/Home/HomeReducer";
 import { CartContext } from "../context/CartContext";
 import { AuthenticationContext } from "../context/authContext.";
 import { useNavigate } from "react-router-dom";
