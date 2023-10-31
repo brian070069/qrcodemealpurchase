@@ -3,7 +3,7 @@ import InLineInputError from "../InLineInputError";
 import jwtDecode from "jwt-decode";
 import { useFormik } from "formik";
 import { RxCross2 } from "react-icons/rx";
-import { phoneNumberValidationSchema } from "../../pages/SignUp/RegistrationValidation";
+import { phoneNumberValidationSchema } from "../../Pages/SignUp/RegistrationValidation";
 
 const ReadyToPay = ({ data }) => {
   const { handleHidePaymentArea, handleMpesaPayment, handleRedeemPoints } =
