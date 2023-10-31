@@ -1,5 +1,5 @@
 import React from "react";
-import emptyCart from "../../../../assets/emptycart.svg";
+import emptyCart from "../../../../assets/emptyCart.svg";
 
 const EmptyCart = () => {
   return (
