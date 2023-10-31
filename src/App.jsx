@@ -9,7 +9,7 @@ import FallBack from "./components/FallBack";
 //pages
 const Register = React.lazy(() => import("./Pages/SignUp/Register"));
 const Login = React.lazy(() => import("./Pages/SingIn/Login"));
-const ForgotPassword = React.lazy(() => import("./pages/resetpassword/Index"));
+const ForgotPassword = React.lazy(() => import("./Pages/resetpassword/Index"));
 const Cart = React.lazy(() => import("./Pages/Cart/Cart"));
 const MealHistory = React.lazy(() => import("./Pages/Mealhistory/MealHistory"));
 const OrderDetails = React.lazy(() =>
