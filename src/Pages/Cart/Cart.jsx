@@ -5,7 +5,7 @@ import BigCartPayments from "./BigCartPayments";
 import Header from "../../components/Header";
 import CartHeader from "./CartHeader";
 import { CartContext } from "../../context/CartContext";
-import emptyCart from "../../assets/emptycart.svg";
+import emptyCart from "../../assets/emptyCart.svg";
 import { useMpesaPayment } from "../../hooks/useMpesaPayment";
 import ReadyToPay from "../../components/payments/ReadyToPay";
 import SuccessfulPayment from "../../components/payments/SuccesfulPayments";
