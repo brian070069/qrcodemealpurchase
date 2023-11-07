@@ -122,6 +122,15 @@ const UpdateFoodForm = ({ id }) => {
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
   };
+  const handleDeleteFood = async () => {
+    try {
+      const response = await axios.delete(cartBaseUrl + `food/${id}/`);
+      toast.success("deleted succesfully", { theme: "dark" });
+      navigate("/staff");
+    } catch (error) {
+      toast.error("an error occured please try again", { theme: "dark" });
+    }
+  };
 
   useEffect(() => {
     getFoodToUpdate();
@@ -198,7 +207,7 @@ const UpdateFoodForm = ({ id }) => {
               />
               <span>available</span>
             </div>
-            <button type="button">
+            <button type="button" onClick={handleDeleteFood}>
               <HiTrash size={24} />
             </button>
           </div>
