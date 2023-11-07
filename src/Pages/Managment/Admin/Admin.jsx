@@ -17,55 +17,11 @@ const Admin = () => {
     { name: "bread", uv: 50, pv: 2400, amt: 2400 },
   ];
 
-  const getPreviousData = async () => {
-    try {
-      const respnose = await axios.get(charts);
-      console.log(respnose.data);
-    } catch (err) {}
-  };
-
-  useEffect(() => {
-    getPreviousData();
-  }, []);
   return (
     <>
       <Header />
       <div className="tableDaily__statisticsContainer">
         <TableStatsHeader />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
-        <AllFoodTableStats />
         <AllFoodTableStats />
       </div>
     </>

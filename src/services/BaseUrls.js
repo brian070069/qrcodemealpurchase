@@ -12,4 +12,4 @@ export const chatApi = "https://testmanage-20ef9d49fe9a.herokuapp.com/chat";
 export const profileApi =
   "https://testmanage-20ef9d49fe9a.herokuapp.com/profile/";
 export const charts =
-  "https://testmanage-20ef9d49fe9a.herokuapp.com/records/api/dailyrecord//";
+  "https://testmanage-20ef9d49fe9a.herokuapp.com/records/dailyrecord/";

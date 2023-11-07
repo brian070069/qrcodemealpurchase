@@ -2602,7 +2602,7 @@ button:hover {
 .foodStatistics,
 .tableDaily__statisticsItems {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 .foodStatistics div,
 .tableDaily__statisticsItems div {

@@ -9,7 +9,6 @@ const TableStatsHeader = () => {
         <div>expected amount</div>
         <div>gotten amount</div>
         <div>deficiet</div>
-        <div>scanned items</div>
       </div>
     </div>
   );
