@@ -5,6 +5,7 @@ import axios from "axios";
 import { charts } from "../../../services/BaseUrls";
 import AllFoodTableStats from "./tableStats/AllFoodTableStats";
 import TableStatsHeader from "./tableStats/TableStatsHeader";
+import PreMeasured from "./preMeasuredQuantity/PreMeasured";
 
 const Admin = () => {
   const data = [
@@ -24,6 +25,7 @@ const Admin = () => {
         <TableStatsHeader />
         <AllFoodTableStats />
       </div>
+      <PreMeasured />
     </>
   );
 };

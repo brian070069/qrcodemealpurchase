@@ -5,10 +5,9 @@ const TableStatsHeader = () => {
     <div className="tableDaily__statisticsHeader">
       <div className="tableDaily__statisticsItems ">
         <div>item</div>
-        <div>premeasured Quantity</div>
-        <div>expected amount</div>
-        <div>gotten amount</div>
-        <div>deficiet</div>
+        <div>measured Quantity</div>
+        <div>portions</div>
+        <div>sold(ksh)</div>
       </div>
     </div>
   );

@@ -28,15 +28,14 @@ const AllFoodTableStats = () => {
             <div className="foodStatistics ">
               <div className="foodStatistics__name">{record.food}</div>
               <div className="foodStatistics__premeasuredQuantity">
-                under construction
+                {record.measuredFood}
               </div>
-              <div className="foodStatistics__ExpectedAmount">
-                under construction
+              <div className="foodStatistics__Deficiet">
+                {record.expectedQuantity}
               </div>
               <div className="foodStatistics__GottenAmount">
                 {record.quantity}
               </div>
-              <div className="foodStatistics__Deficiet">under construction</div>
             </div>
           </div>
         );
