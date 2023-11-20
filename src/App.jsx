@@ -60,7 +60,7 @@ function App() {
               <Route path=":id" element={<OrderDetails />} />
             </Route>
             <Route path="/cart" element={<Cart />} />
-            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/customercare" element={<Transactions />} />
             <Route path="/staff">
               <Route index element={<UpdateItems />} />
               <Route path="scanner" element={<Scanner />} />

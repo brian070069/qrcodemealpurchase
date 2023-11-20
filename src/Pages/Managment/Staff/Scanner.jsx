@@ -46,6 +46,10 @@ const Scanner = () => {
       } catch (err) {
         setIsLoading(false);
         setOrderId("");
+         setOrderedFood({
+          scannedFood: [],
+          userInfo: [],
+        });
         if (err.response?.data.error) {
           toast.error("Meal qrCode already scanned", {
             position: "top-center",
