@@ -64,6 +64,7 @@ const Scanner = () => {
             position: "top-right",
           });
         } else {
+          console.log(err)
           toast.error("an error occured please try again", {
             position: "top-right",
           });
