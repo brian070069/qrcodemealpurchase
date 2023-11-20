@@ -21,7 +21,7 @@ const Scanner = () => {
 
   const getInfo = async () => {
     const reponse = await axios.get(
-      "https://testmanage-20ef9d49fe9a.herokuapp.com/records/api/dailyrecord//"
+      "https://testmanage-20ef9d49fe9a.herokuapp.com/records/api/dailyrecord/"
     );
     console.log(reponse.data);
   };
