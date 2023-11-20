@@ -19,12 +19,7 @@ const Scanner = () => {
     userInfo: {},
   });
 
-  const getInfo = async () => {
-    const reponse = await axios.get(
-      "https://testmanage-20ef9d49fe9a.herokuapp.com/records/api/dailyrecord/"
-    );
-    console.log(reponse.data);
-  };
+ 
 
   //find scanned food
   const getScannedFood = useCallback(() => {
@@ -81,9 +76,7 @@ const Scanner = () => {
     inputRef.current.focus();
   }, [orderId]);
 
-  useEffect(() => {
-    getInfo();
-  });
+  
 
   return (
     <>
