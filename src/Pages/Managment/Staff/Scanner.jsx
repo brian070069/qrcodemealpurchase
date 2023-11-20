@@ -58,12 +58,7 @@ const Scanner = () => {
           toast.error("failed to contact server please try again", {
             position: "top-right",
           });
-        } else {
-          console.log(err)
-          toast.error("an error occured please try again", {
-            position: "top-right",
-          });
-        }
+        } 
       }
     };
     scannedFood(orderId);
