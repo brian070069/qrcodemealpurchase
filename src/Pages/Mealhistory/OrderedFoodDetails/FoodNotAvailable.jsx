@@ -10,7 +10,7 @@ const FoodNotAvailable = () => {
           some foods are not available,after the scanning the price of those
           foods that are not available will be coverted to points which you can
           use later or use them to purchase another meal instantly...OR JUST
-          PURCHASE ANOTHER MEAL YOU ARE RICH DAWG HAHAHA
+          PURCHASE ANOTHER MEAL, YOU ARE RICH DAWG hahaaa
         </h4>
         <button
           type="button"

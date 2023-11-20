@@ -1,7 +1,8 @@
 import SingleFoodInList from "./SingleFoodInList";
 
 const OrderFoodList = ({ props }) => {
-  const { ordered_food: orderedFood } = props;
+  const { ordered_food: orderedFood,status } = props;
+
   return (
     <div className="allFoodOrdered">
       {orderedFood?.map((orderedFood) => {
@@ -9,6 +10,7 @@ const OrderFoodList = ({ props }) => {
           <SingleFoodInList
             key={orderedFood.food.food_id}
             orderedFood={orderedFood}
+            status={status}
           />
         );
       })}
