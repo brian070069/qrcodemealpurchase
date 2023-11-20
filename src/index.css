@@ -126,7 +126,7 @@ button:hover {
 }
 
 .header__left img {
-  width: 20px;
+  width: 70px;
 }
 
 .header__center {
@@ -784,7 +784,7 @@ button:hover {
 }
 
 .simpleHeader img {
-  width: 30px;
+  width: 70px;
 }
 
 .simpleHeader button i {
@@ -1326,7 +1326,7 @@ button:hover {
 
 .orders__container {
   max-width: 700px;
-  margin: 110px auto;
+  margin: 90px auto;
 }
 
 .orders__header > h4 {
@@ -2639,7 +2639,7 @@ button:hover {
   }
 
   .simpleHeader img {
-    width: 30px;
+    width: 60px;
   }
 
   .foods__orderedContainer {
@@ -2938,7 +2938,7 @@ button:hover {
   }
 
   .header__left img {
-    width: 20px;
+    width: 60px;
   }
 
   .inputandCartBasket__container {

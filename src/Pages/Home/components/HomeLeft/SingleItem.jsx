@@ -1,5 +1,4 @@
 import React from "react";
-import foodImage from "../../../../assets/c1.png";
 import Rating from "../Ratings/Rating";
 import AddFoodToCartBtn from "./AddToCartBtn";
 import { useAddFoodToCart } from "../../../../hooks/useAddFoodToCart";

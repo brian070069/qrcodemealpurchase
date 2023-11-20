@@ -1,5 +1,4 @@
 import React from "react";
-import FoodImage from "../../../../assets/c1.png";
 import CartLoader from "./CartLoader";
 import AdjustFoodQuanitityBtn from "./AdjustFoodQuanitityBtn";
 import {

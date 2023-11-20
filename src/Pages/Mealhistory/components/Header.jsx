@@ -4,10 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <section className=" simpleHeader row mealHistoryHeader ">
+    <section className="simpleHeader row mealHistoryHeader ">
       <Link to="/">
         <img
-          src="https://ik.imagekit.io/kzmqi6dbk/logo.png?updatedAt=1689686339281"
+          src="https://ik.imagekit.io/kzmqi6dbk/logo2_6VhjzQesV?updatedAt=1689687652550"
           alt="logo"
         />
       </Link>

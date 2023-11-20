@@ -3,6 +3,7 @@
 // export const mpesaBaseUrl = "http://127.0.0.1:8000/mpesa/";
 // export const chatApi = "http://127.0.0.1:8000/chat";
 // export const profileApi = "http://127.0.0.1:8000/profile/";
+// export const charts = "http://127.0.0.1:8000/records/dailyrecord/";
 
 export const userUrl = "https://testmanage-20ef9d49fe9a.herokuapp.com/auth/";
 export const cartBaseUrl =
