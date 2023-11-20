@@ -85,7 +85,7 @@ const SingleOrderDetails = ({ props }) => {
           </div>
           <span
             className={`order__detailStatus ${
-              formatedStatus === "completed" ? "completed" : ""
+              formatedStatus === "complete" ? "completed" : ""
             }`}
           >
             {formatedStatus}

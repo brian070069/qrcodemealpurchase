@@ -127,6 +127,10 @@ button:hover {
 
 .header__left img {
   width: 70px;
+  transition: all 0.15s ease;
+}
+.header__left img:hover{
+  cursor: pointer;
 }
 
 .header__center {
@@ -1400,7 +1404,10 @@ button:hover {
   color: var(--green);
   font-size: var(--font-medium);
 }
-
+.completed{
+  color: rgb(189, 26, 26);
+  
+}
 .foods__orderedContainer {
   max-width: 800px;
   margin: 110px auto 20px;
@@ -3082,4 +3089,10 @@ button:hover {
   .availableItem {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+
+.completed{
+  color: rgb(189, 26, 26);
+  
 }
