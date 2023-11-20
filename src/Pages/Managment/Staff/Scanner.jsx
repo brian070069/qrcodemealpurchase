@@ -34,6 +34,7 @@ const Scanner = () => {
         toast.success("scanned succesfully", {
           position: "top-center",
         });
+        console.log(response.data);
         setOrderedFood({
           scannedFood: response.data.ordered_food,
           userInfo: response.data.user,
