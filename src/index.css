@@ -129,7 +129,7 @@ button:hover {
   width: 70px;
   transition: all 0.15s ease;
 }
-.header__left img:hover{
+.header__left img:hover {
   cursor: pointer;
 }
 
@@ -1404,9 +1404,8 @@ button:hover {
   color: var(--green);
   font-size: var(--font-medium);
 }
-.completed{
+.completed {
   color: rgb(189, 26, 26);
-  
 }
 .foods__orderedContainer {
   max-width: 800px;
@@ -1980,7 +1979,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: 100px;
-  margin-top: -10px;
+  margin-top: -23px;
 }
 
 .counterPanel__Container {
@@ -3091,8 +3090,6 @@ button:hover {
   }
 }
 
-
-.completed{
+.completed {
   color: rgb(189, 26, 26);
-  
 }

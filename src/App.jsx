@@ -42,6 +42,7 @@ function App() {
 
   return (
     <Suspense fallback={<FallBack />}>
+      <FallBack />
       <ToastContainer style={{ width: "fit-content" }} />
       <SkeletonTheme baseColor="#192433" highlightColor="#23313d">
         <Routes>

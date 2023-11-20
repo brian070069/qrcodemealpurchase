@@ -33,23 +33,22 @@ const Authenticated = () => {
           icon={<BsPerson />}
           navigation={"/profile"}
         />
+        <PageLink name={"cart"} icon={<BiCart />} navigation={"/cart"} />
         <PageLink
           name={"staff"}
           icon={<MdOutlineAdminPanelSettings />}
           navigation={"/staff"}
         />
-        <PageLink name={"cart"} icon={<BiCart />} navigation={"/cart"} />
         <PageLink
           name={"admin"}
           icon={<MdOutlineAdminPanelSettings />}
           navigation={"/admin"}
         />
-          <PageLink
-            name={"customer care"}
-            icon={<HiOutlineChatBubbleBottomCenterText />}
-            navigation={"/customercare"}
-          />
-        
+        <PageLink
+          name={"customer care"}
+          icon={<HiOutlineChatBubbleBottomCenterText />}
+          navigation={"/customercare"}
+        />
       </div>
     </nav>
   );

@@ -1,6 +1,7 @@
 const SingleFoodInList = ({ orderedFood,status }) => {
   const { food, sub_total, quantity } = orderedFood;
   const { food_name, price, is_avilable } = food;
+  
 
   return (
     <div className="food__ordered">
