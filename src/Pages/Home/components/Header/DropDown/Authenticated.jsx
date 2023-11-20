@@ -44,14 +44,12 @@ const Authenticated = () => {
           icon={<MdOutlineAdminPanelSettings />}
           navigation={"/admin"}
         />
-
-        {token?.is_ccare && (
           <PageLink
             name={"customer care"}
             icon={<HiOutlineChatBubbleBottomCenterText />}
             navigation={"/customercare"}
           />
-        )}
+        
       </div>
     </nav>
   );
