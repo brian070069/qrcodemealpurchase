@@ -2679,6 +2679,27 @@ button:hover {
 .foodStatistics__Deficiet {
   color: red;
 }
+.foodsSold__infoSmallScreen {
+  display: none;
+  border-radius: 5px;
+  margin: 0px 7px;
+  margin-bottom: 10px;
+  background-color: var(--main-bg-color);
+}
+
+.foodStatistics__smallScreen {
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.foodStatistics__name {
+  color: yellow;
+}
+.foodStatistics__smallScreen h4 {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 .adminLoader {
   display: flex;
   justify-content: center;
@@ -2919,8 +2940,13 @@ button:hover {
   .userTransactionOrderId {
     display: none;
   }
-  .admintTableSales__date {
+  .admintTableSales__date,
+  .tableDaily__statisticsItems,
+  .foodsSold__info {
     display: none;
+  }
+  .foodsSold__infoSmallScreen {
+    display: block;
   }
 }
 

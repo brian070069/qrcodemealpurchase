@@ -7,7 +7,7 @@ const TableStatsHeader = () => {
         <div>item</div>
         <div>measured Quantity</div>
         <div>portions</div>
-        <div>sold(ksh)</div>
+        <div>sales(ksh)</div>
       </div>
     </div>
   );
