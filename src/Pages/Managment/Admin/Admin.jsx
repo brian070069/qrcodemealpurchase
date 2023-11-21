@@ -22,7 +22,6 @@ const Admin = () => {
     <>
       <Header />
       <div className="tableDaily__statisticsContainer">
-        <TableStatsHeader />
         <AllFoodTableStats />
       </div>
       <PreMeasured />

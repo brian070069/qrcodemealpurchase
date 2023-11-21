@@ -2590,6 +2590,50 @@ button:hover {
   background-color: var(--black-2);
   min-height: calc(100vh - 100px);
 }
+.adminTableSales__filter {
+  justify-content: space-between;
+  padding: 4px 17px;
+}
+.admintTableSales__date {
+  color: var(--white);
+  font-size: 16px;
+  flex: 1;
+}
+.admintTableSales__date span {
+  padding-right: 4px;
+}
+.datePicker__container h5 {
+  color: var(--green);
+  padding-right: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.datePicker {
+  max-width: 130px;
+  max-height: 50px;
+  background-color: yellow;
+}
+.datePicker:hover {
+  cursor: pointer;
+}
+.react-datepicker__triangle {
+  display: none;
+}
+.react-datepicker__header {
+  border-bottom: solid 5px var(--light) !important;
+  background: rgba(221, 221, 221, 0.856);
+}
+.react-datepicker__day.react-datepicker__day--today {
+  border-radius: 50%;
+  border: solid 2px var(--brand);
+  background-color: yellow;
+  color: var(--dark);
+  width: 30px;
+  height: 30px;
+}
+.react-datepicker__day {
+  color: white;
+}
 .tableDaily__statisticsHeader {
   padding: 10px 10px;
 }
@@ -2634,6 +2678,19 @@ button:hover {
 }
 .foodStatistics__Deficiet {
   color: red;
+}
+.adminLoader {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  height: 100%;
+}
+.adminLoader h4 {
+  color: rgb(231, 17, 17);
+  font-weight: 500;
+  text-decoration: underLine;
+  letter-spacing: 1px;
+  font-size: var(--font-large);
 }
 @media (max-width: 1010px) {
   .homeRight__container {
