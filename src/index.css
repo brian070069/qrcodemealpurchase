@@ -2919,6 +2919,9 @@ button:hover {
   .userTransactionOrderId {
     display: none;
   }
+  .admintTableSales__date {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
