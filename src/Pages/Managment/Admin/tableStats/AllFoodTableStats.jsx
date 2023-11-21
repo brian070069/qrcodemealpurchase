@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import TableStatsHeader from "./TableStatsHeader";
-import { ColorRing } from "react-loader-spinner";
+import TableSalesFilter from "./TableSalesFilter";
+import TableStatsLoader from "./TableStatsLoader";
+import TableStatusError from "./TableStatusError";
+import Sales from "./Sales";
+import { charts } from "../../../../services/BaseUrls";
 
 const AllFoodTableStats = () => {
   const [previousRecords, setPreviousRecords] = useState([]);
@@ -14,9 +16,7 @@ const AllFoodTableStats = () => {
   const getPreviousRecords = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get(
-        "https://testmanage-20ef9d49fe9a.herokuapp.com/records/dailyrecord/"
-      );
+      const response = await axios.get(charts);
       setIsLoading(false);
       const salesData = response.data;
       if (salesData) {
@@ -61,60 +61,14 @@ const AllFoodTableStats = () => {
 
   return (
     <>
-      <div className="adminTableSales__filter row">
-        <div className="admintTableSales__date">
-          <span>Today</span>
-          {`${
-            new Date().getMonth() + 1
-          }/${new Date().getDate()}/${new Date().getFullYear()}`}
-        </div>
-        <div className="datePicker__container row">
-          <h5>pick date</h5>
-          <DatePicker
-            showIcon
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            wrapperClassName="datePicker"
-          />
-        </div>
-      </div>
+      <TableSalesFilter data={{ startDate, setStartDate }} />
       <TableStatsHeader />
-
       {isLoading ? (
-        <div className="adminLoader">
-          <ColorRing
-            visible={true}
-            height="50"
-            width="50"
-            ariaLabel="blocks-loading"
-            wrapperStyle={{}}
-            wrapperClass="blocks-wrapper"
-            colors={["red", "red", "red", "red", "red"]}
-          />
-        </div>
+        <TableStatsLoader />
       ) : previousRecords.length <= 0 ? (
-        <div className="adminLoader">
-          <h4>Data for this date does not exist</h4>
-        </div>
+        <TableStatusError />
       ) : (
-        previousRecords.map((record) => {
-          return (
-            <div className="foodsSold__info" key={record.dailyrecord_id}>
-              <div className="foodStatistics ">
-                <div className="foodStatistics__name">{record.food}</div>
-                <div className="foodStatistics__premeasuredQuantity">
-                  {record.measuredFood}
-                </div>
-                <div className="foodStatistics__Deficiet">
-                  {record.expectedQuantity}
-                </div>
-                <div className="foodStatistics__GottenAmount">
-                  {record.quantity}
-                </div>
-              </div>
-            </div>
-          );
-        })
+        <Sales previousRecords={previousRecords} />
       )}
     </>
   );
