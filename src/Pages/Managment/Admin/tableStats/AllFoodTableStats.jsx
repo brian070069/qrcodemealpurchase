@@ -7,6 +7,7 @@ import TableStatsLoader from "./TableStatsLoader";
 import TableStatusError from "./TableStatusError";
 import Sales from "./Sales";
 import { charts } from "../../../../services/BaseUrls";
+import Header from "../../../Home/components/Header/Header";
 
 const AllFoodTableStats = () => {
   const [previousRecords, setPreviousRecords] = useState([]);
@@ -60,7 +61,8 @@ const AllFoodTableStats = () => {
   }, [startDate]);
 
   return (
-    <>
+    <div className="tableDaily__statisticsContainer">
+      <Header />
       <TableSalesFilter data={{ startDate, setStartDate }} />
       <TableStatsHeader />
       {isLoading ? (
@@ -70,7 +72,7 @@ const AllFoodTableStats = () => {
       ) : (
         <Sales previousRecords={previousRecords} />
       )}
-    </>
+    </div>
   );
 };
 

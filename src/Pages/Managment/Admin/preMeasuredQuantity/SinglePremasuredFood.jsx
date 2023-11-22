@@ -43,8 +43,8 @@ const SinglePremasuredFood = ({ data }) => {
           await axios.post(url, data);
           const scannedFood = getScannedFood(item.food_name);
           setFood([scannedFood]);
-          setMeasuredQty(food[0]?.measuredFood);
-          setMeasuredPtn(food[0]?.expectedQuantity);
+          setMeasuredQty(scannedFood?.measuredFood || "");
+          setMeasuredPtn(scannedFood?.expectedQuantity || "");
         }
 
         setIsLoading(false);
@@ -73,8 +73,8 @@ const SinglePremasuredFood = ({ data }) => {
       const scannedFood = getScannedFood(item.food_name);
       if (scannedFood) {
         setFood([scannedFood]);
-        setMeasuredQty(food[0]?.measuredFood);
-        setMeasuredPtn(food[0]?.expectedQuantity);
+        setMeasuredQty(scannedFood?.measuredFood || "");
+        setMeasuredPtn(scannedFood?.expectedQuantity || "");
       }
     }
   }, [scannedData]);

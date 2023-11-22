@@ -25,6 +25,12 @@ const AddNewItem = React.lazy(() =>
   import("./Pages/Managment/Staff/updateItems/addNewFood/AddNewItem")
 );
 const Admin = React.lazy(() => import("./Pages/Managment/Admin/Admin"));
+const SaleTable = React.lazy(() =>
+  import("./Pages/Managment/Admin/tableStats/AllFoodTableStats")
+);
+const PreMeasuredQuantities = React.lazy(() =>
+  import("./Pages/Managment/Admin/preMeasuredQuantity/PreMeasured")
+);
 const UpdateItems = React.lazy(() =>
   import("./Pages/Managment/Staff/updateItems/updateExistingFood/UpdateItems")
 );
@@ -69,6 +75,10 @@ function App() {
             </Route>
             <Route path="/admin">
               <Route index element={<Admin />} />
+              <Route
+                path="measuredquantities"
+                element={<PreMeasuredQuantities />}
+              />
             </Route>
           </Route>
 

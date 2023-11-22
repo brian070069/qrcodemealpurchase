@@ -2585,10 +2585,14 @@ button:hover {
   color: var(--gray-2);
 }
 /* admin */
+.admin__container {
+  margin-top: 80px;
+}
 .tableDaily__statisticsContainer {
-  margin-top: 90px;
   background-color: var(--black-2);
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 115px);
+  padding: 30px 1px;
+  padding-top: 0px;
 }
 .adminTableSales__filter {
   justify-content: space-between;
@@ -2665,6 +2669,7 @@ button:hover {
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 16px;
+  border-radius: 3px;
   background-color: var(--main-bg-color);
   padding: 11px 0px;
 }
@@ -2715,6 +2720,8 @@ button:hover {
 }
 .preMeasuredFood__container {
   background-color: var(--black-2);
+  height: calc(100vh - 90px);
+  padding: 10px 10px;
 }
 
 .enterPreMeasured__Quantity,
@@ -2732,33 +2739,103 @@ button:hover {
   letter-spacing: 1px;
   background-color: var(--black-1);
   padding: 15px 15px;
-  font-size: 16.5px;
+  font-size: 16px;
+  border-radius: 5px;
 }
 .preMeasuredFood__quantity {
   justify-content: center;
 }
+.enterPreMeasured__Quantity {
+  border-radius: 4px;
+}
 .enterPreMeasured__Quantity > h3 {
   color: white;
   font-weight: 500;
-  font-size: 16.5px;
+  font-size: 16px;
   text-transform: capitalize;
   letter-spacing: 1px;
 }
 .preMeasuredFood__input input {
   text-align: center;
   outline: none;
+  border: none;
 }
 .preMeasuredFood__btn {
   justify-content: flex-end;
 }
 .preMeasuredFood__btn button {
   width: fit-content;
-  padding: 7px 30px;
+  padding: 7px 20px;
   border-radius: 5px;
-  font-size: 15.5px;
+  font-size: 15px;
   letter-spacing: 1px;
   text-transform: capitalize;
   background-color: var(--yellow);
+}
+.adminNavigation__container {
+  position: relative;
+  transition: all 20s ease;
+  transition-duration: 3s;
+}
+.adminNavigation {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 76px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  z-index: 100;
+}
+.adminSidebar__btn {
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+.adminNavigation__navListContainer {
+  max-width: 380px;
+  height: 100%;
+  padding: 0px 10px;
+  background-color: var(--black-2);
+}
+.adminNavigation__navListContainerHeader {
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.adminNavigation__navListContainerHeader button {
+  color: var(--gray-1);
+}
+.adminNavigation__navListContainerHeader div {
+  width: 75px;
+  height: 40px;
+}
+.adminNavigation__navListContainerHeader div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.adminNavigation__listContainer {
+  background-color: var(--black-1);
+  border-radius: 5px;
+  padding: 13px 15px;
+  height: 87%;
+  overflow-y: scroll;
+}
+.adminNavigation__list {
+  flex-direction: column;
+  display: flex;
+}
+.adminLinks {
+  color: rgba(236, 233, 233, 0.95);
+  text-decoration: none;
+  margin-bottom: 13px;
+  padding: 5px 0px;
+  font-size: 18px;
+}
+.adminLinks .adminLinks__icon {
+  color: var(--gray-2);
+  padding-right: 8px;
+  height: 22px;
 }
 @media (max-width: 1010px) {
   .homeRight__container {
@@ -2890,9 +2967,6 @@ button:hover {
 }
 
 @media (max-width: 774px) {
-  .home_header {
-    background-color: var(--main-bg-color);
-  }
   .home__leftHeader {
     padding: 0;
     background-color: unset;
@@ -2994,6 +3068,9 @@ button:hover {
   }
   .foodsSold__infoSmallScreen {
     display: block;
+  }
+  .adminNavigation__navListContainer {
+    max-width: 100%;
   }
 }
 

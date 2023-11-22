@@ -3,12 +3,21 @@ import { useFetch } from "../../../../hooks/useFetch";
 import { cartBaseUrl, charts } from "../../../../services/BaseUrls";
 import PreMeasuredFoodHeader from "./PreMeasuredFoodheader";
 import SinglePremasuredFood from "./SinglePremasuredFood";
+import Header from "../../../Home/components/Header/Header";
+import { RxHamburgerMenu } from "react-icons/rx";
+import AdminSideBarNavigation from "../Components/AdminSideBarNavigation";
+import TableStatsLoader from "../tableStats/TableStatsLoader";
 
 const PreMeasured = () => {
-  const { fetchedItems: scannedData, isLoadingData } = useFetch(charts, false);
+  const { fetchedItems: scannedData } = useFetch(charts, false);
   const { fetchedItems, isLoading } = useFetch(cartBaseUrl + "food/", false);
   const [availableFood, setAvailableFood] = useState([]);
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate] = useState(new Date());
+  const [isSideBarshow, setIsSideBarShow] = useState(false);
+
+  const toggleSideBar = () => {
+    setIsSideBarShow((prevStatus) => !prevStatus);
+  };
 
   const getScannedFood = (foodName) => {
     //format scanned data
@@ -45,17 +54,30 @@ const PreMeasured = () => {
   }, [fetchedItems]);
 
   return (
-    <div className="preMeasuredFood__container">
-      <PreMeasuredFoodHeader />
-      {availableFood.length > 0 &&
-        availableFood.map((item) => {
-          return (
-            <SinglePremasuredFood
-              key={item.food_id}
-              data={{ item, getScannedFood, scannedData }}
-            />
-          );
-        })}
+    <div className="admin__container">
+      <button className="adminSidebar__btn" onClick={toggleSideBar}>
+        <RxHamburgerMenu size={30} />
+      </button>
+      {isSideBarshow && (
+        <AdminSideBarNavigation toggleSideBar={toggleSideBar} />
+      )}
+      <div className="preMeasuredFood__container">
+        <Header />
+        <PreMeasuredFoodHeader />
+        {isLoading ? (
+          <TableStatsLoader />
+        ) : (
+          availableFood.length > 0 &&
+          availableFood.map((item) => {
+            return (
+              <SinglePremasuredFood
+                key={item.food_id}
+                data={{ item, getScannedFood, scannedData }}
+              />
+            );
+          })
+        )}
+      </div>
     </div>
   );
 };
