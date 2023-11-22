@@ -6,8 +6,8 @@ const Sales = ({ previousRecords }) => {
     <>
       {previousRecords.map((record) => {
         return (
-          <>
-            <div className="foodsSold__info" key={record.dailyrecord_id}>
+          <div key={record.dailyrecord_id}>
+            <div className="foodsSold__info">
               <div className="foodStatistics ">
                 <div className="foodStatistics__name">{record.food}</div>
                 <div className="foodStatistics__premeasuredQuantity">
@@ -22,7 +22,7 @@ const Sales = ({ previousRecords }) => {
               </div>
             </div>
             <SalesSmallScreen record={record} />
-          </>
+          </div>
         );
       })}
     </>

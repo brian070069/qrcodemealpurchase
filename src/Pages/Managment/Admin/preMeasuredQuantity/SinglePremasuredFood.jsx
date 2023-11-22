@@ -1,11 +1,15 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { charts } from "../../../../services/BaseUrls";
+import { toast } from "react-toastify";
+import { TailSpin } from "react-loader-spinner";
 
 const SinglePremasuredFood = ({ data }) => {
-  const { item } = data;
+  const { item, getScannedFood, scannedData } = data;
+  const [food, setFood] = useState([]);
   const [measuredQty, setMeasuredQty] = useState("");
   const [measuredPtn, setMeasuredPtn] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const addPremeasuredQuantity = async (
     foodName,
@@ -18,17 +22,66 @@ const SinglePremasuredFood = ({ data }) => {
       expectedQuantity: expectedPortions,
     };
     try {
-      const response = await axios.patch(charts, data);
-      console.log(response);
+      if (!measuredPtn) {
+        toast.error("portions can't be empty", {
+          position: "top-center",
+          theme: "dark",
+        });
+      } else if (!measuredQty) {
+        toast.error("measured quantity can't be empty", {
+          position: "top-center",
+          theme: "dark",
+        });
+      } else {
+        setIsLoading(true);
+        const url =
+          food.length > 0 ? charts + `${food[0]?.dailyrecord_id}/` : charts;
+
+        if (food.length > 0) {
+          await axios.patch(url, data);
+        } else {
+          await axios.post(url, data);
+          const scannedFood = getScannedFood(item.food_name);
+          setFood([scannedFood]);
+          setMeasuredQty(food[0]?.measuredFood);
+          setMeasuredPtn(food[0]?.expectedQuantity);
+        }
+
+        setIsLoading(false);
+      }
     } catch (error) {
-      console.log(error);
+      setIsLoading(false);
+      if (!error.response) {
+        toast.error("failed to contact server", {
+          theme: "dark",
+          position: "top-center",
+        });
+      } else if (error.request.status === 401) {
+        localStorage.clear();
+        navigate("/login", { replace: true });
+      } else {
+        toast.error("an error occured please try again", {
+          theme: "dark",
+          position: "top-center",
+        });
+      }
     }
   };
+
+  useEffect(() => {
+    if (scannedData.length > 0) {
+      const scannedFood = getScannedFood(item.food_name);
+      if (scannedFood) {
+        setFood([scannedFood]);
+        setMeasuredQty(food[0]?.measuredFood);
+        setMeasuredPtn(food[0]?.expectedQuantity);
+      }
+    }
+  }, [scannedData]);
 
   return (
     <div className="enterPreMeasured__Quantity">
       <h3>{item.food_name}</h3>
-
       <div className="preMeasuredFood__input">
         <input
           type="text"
@@ -48,14 +101,27 @@ const SinglePremasuredFood = ({ data }) => {
         />
       </div>
       <div className="preMeasuredFood__btn row">
-        <button
-          type="button"
-          onClick={() => {
-            addPremeasuredQuantity(item.food_name, measuredQty, measuredPtn);
-          }}
-        >
-          add
-        </button>
+        {isLoading ? (
+          <TailSpin
+            height="20"
+            width="20"
+            color="red"
+            ariaLabel="tail-spin-loading"
+            radius="0.5"
+            wrapperStyle={{ paddingRight: "40px" }}
+            wrapperClass=""
+            visible={true}
+          />
+        ) : (
+          <button
+            type="button"
+            onClick={() => {
+              addPremeasuredQuantity(item.food_name, measuredQty, measuredPtn);
+            }}
+          >
+            {food && food.length > 0 ? "update" : "add"}
+          </button>
+        )}
       </div>
     </div>
   );

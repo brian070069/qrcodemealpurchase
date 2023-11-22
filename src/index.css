@@ -2713,6 +2713,53 @@ button:hover {
   letter-spacing: 1px;
   font-size: var(--font-large);
 }
+.preMeasuredFood__container {
+  background-color: var(--black-2);
+}
+
+.enterPreMeasured__Quantity,
+.preMeasuredFood__header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5px;
+  background-color: var(--main-bg-color);
+  margin-bottom: 5px;
+  align-items: center;
+  padding: 5px 15px;
+}
+.preMeasuredFood__header {
+  color: white;
+  letter-spacing: 1px;
+  background-color: var(--black-1);
+  padding: 15px 15px;
+  font-size: 16.5px;
+}
+.preMeasuredFood__quantity {
+  justify-content: center;
+}
+.enterPreMeasured__Quantity > h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 16.5px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.preMeasuredFood__input input {
+  text-align: center;
+  outline: none;
+}
+.preMeasuredFood__btn {
+  justify-content: flex-end;
+}
+.preMeasuredFood__btn button {
+  width: fit-content;
+  padding: 7px 30px;
+  border-radius: 5px;
+  font-size: 15.5px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  background-color: var(--yellow);
+}
 @media (max-width: 1010px) {
   .homeRight__container {
     display: none;
