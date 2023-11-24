@@ -2837,6 +2837,188 @@ button:hover {
   padding-right: 8px;
   height: 22px;
 }
+.adminSearchUser__container {
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black-2);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.adminUser__input {
+  background-color: var(--black-1);
+  flex: 0.55;
+  border-radius: 2px;
+  border: 1px solid rgba(167, 167, 167, 0.582);
+}
+.adminUser__input button {
+  background-color: var(--main-bg-color);
+  padding: 6px 20px;
+  color: rgba(255, 255, 255, 0.712);
+  height: 100%;
+}
+.adminUser__input input {
+  height: 40px;
+  border: none;
+  border-radius: 0px;
+}
+.numberOfusers h4 {
+  color: var(--yellow);
+  font-size: var(--font-large);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.adminUser__details {
+  padding: 0px 8px;
+}
+.users__container {
+  padding: 10px 15px;
+  margin-top: 2px;
+  background-color: var(--black-1);
+  border-radius: 4px;
+}
+.user__containerHeader {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  font-weight: 500;
+  background-color: var(--main-bg-color);
+  padding: 10px 10px;
+  margin-bottom: 3px;
+}
+.user__containerHeader div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.user__containerHeader h3 {
+  color: white;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.usersAdmin__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.usersAdmin {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  background-color: var(--black-2);
+  padding: 13px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.usersAdmin div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.usersAdmin:hover {
+  cursor: pointer;
+}
+.usersAdmin h4 {
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.usersAdmin__name {
+  color: var(--green);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.usersAdmin__phoneNumber {
+  color: white;
+  font-weight: 500;
+}
+.usersAdmin__status {
+  color: rgb(231, 17, 17);
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.usersAdmin__statusHigherResponsibility {
+  color: green;
+}
+.adminSingle__userContainer {
+  background-color: var(--black-1);
+  height: fit-content;
+  padding: 10px;
+  padding-bottom: 50px;
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+.adminSingle__userInfo h4 {
+  padding: 3px 0px;
+}
+.admin__before,
+.admin__after {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--green);
+  letter-spacing: 1px;
+  padding-right: 5px;
+  font-size: 16px;
+}
+.admin__after {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.userStatus {
+  background-color: var(--black-2);
+  margin-top: 10px;
+  padding: 10px 15px;
+
+  margin-top: 15px;
+  border-radius: 5px;
+}
+.userStatus__Header {
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.userStatus__Header h4:first-child {
+  color: var(--yellow);
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.userStatus__Header h4:nth-child(2) {
+  color: var(--green);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.adminAdd {
+  padding: 10px 10px;
+  justify-content: space-between;
+  background-color: var(--main-bg-color);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.adminAdd__statusBtn {
+  justify-content: center;
+}
+.adminAdd__statusBtn button {
+  background-color: var(--yellow);
+  padding: 8px 15px;
+  width: 100px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.adminAdd div {
+  color: white;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.adminAdd input {
+  width: 22px;
+  height: 22px;
+}
 @media (max-width: 1010px) {
   .homeRight__container {
     display: none;
@@ -3071,6 +3253,9 @@ button:hover {
   }
   .adminNavigation__navListContainer {
     max-width: 100%;
+  }
+  .adminSingle__userContainer {
+    margin: 0px 5px;
   }
 }
 

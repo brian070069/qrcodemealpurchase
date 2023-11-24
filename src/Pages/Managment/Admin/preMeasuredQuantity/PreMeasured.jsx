@@ -7,8 +7,11 @@ import Header from "../../../Home/components/Header/Header";
 import { RxHamburgerMenu } from "react-icons/rx";
 import AdminSideBarNavigation from "../Components/AdminSideBarNavigation";
 import TableStatsLoader from "../tableStats/TableStatsLoader";
+import SideBarButton from "../Components/SideBarButton";
 
 const PreMeasured = () => {
+  // useHasHigherResponsibility("admin");
+
   const { fetchedItems: scannedData } = useFetch(charts, false);
   const { fetchedItems, isLoading } = useFetch(cartBaseUrl + "food/", false);
   const [availableFood, setAvailableFood] = useState([]);
@@ -55,12 +58,7 @@ const PreMeasured = () => {
 
   return (
     <div className="admin__container">
-      <button className="adminSidebar__btn" onClick={toggleSideBar}>
-        <RxHamburgerMenu size={30} />
-      </button>
-      {isSideBarshow && (
-        <AdminSideBarNavigation toggleSideBar={toggleSideBar} />
-      )}
+      <SideBarButton data={{ toggleSideBar, isSideBarshow }} />
       <div className="preMeasuredFood__container">
         <Header />
         <PreMeasuredFoodHeader />

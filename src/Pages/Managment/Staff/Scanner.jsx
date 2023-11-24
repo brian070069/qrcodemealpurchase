@@ -19,8 +19,6 @@ const Scanner = () => {
     userInfo: {},
   });
 
- 
-
   //find scanned food
   const getScannedFood = useCallback(() => {
     const scannedFood = async (idToScan) => {
@@ -46,7 +44,7 @@ const Scanner = () => {
       } catch (err) {
         setIsLoading(false);
         setOrderId("");
-         setOrderedFood({
+        setOrderedFood({
           scannedFood: [],
           userInfo: [],
         });
@@ -63,7 +61,7 @@ const Scanner = () => {
             position: "top-right",
           });
         } else {
-          console.log(err)
+          console.log(err);
           toast.error("an error occured please try again", {
             position: "top-right",
           });
@@ -79,8 +77,6 @@ const Scanner = () => {
     }
     inputRef.current.focus();
   }, [orderId]);
-
-  
 
   return (
     <>

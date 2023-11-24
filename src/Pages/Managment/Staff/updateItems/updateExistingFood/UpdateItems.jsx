@@ -8,6 +8,7 @@ import SideBar from "../../SideBar";
 
 const UpdateItems = () => {
   // useHasHigherResponsibility("staff");
+
   return (
     <>
       <Header />

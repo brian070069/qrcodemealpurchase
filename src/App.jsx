@@ -24,10 +24,16 @@ const Scanner = React.lazy(() => import("./Pages/Managment/Staff/Scanner"));
 const AddNewItem = React.lazy(() =>
   import("./Pages/Managment/Staff/updateItems/addNewFood/AddNewItem")
 );
-const Admin = React.lazy(() => import("./Pages/Managment/Admin/Admin"));
-const SaleTable = React.lazy(() =>
-  import("./Pages/Managment/Admin/tableStats/AllFoodTableStats")
+const Admin = React.lazy(() =>
+  import("./Pages/Managment/Admin/tableStats/Admin")
 );
+const AllUsers = React.lazy(() =>
+  import("./Pages/Managment/Admin/Admins/users/Index")
+);
+const SingleUser = React.lazy(() =>
+  import("./Pages/Managment/Admin/Admins/user/Index")
+);
+
 const PreMeasuredQuantities = React.lazy(() =>
   import("./Pages/Managment/Admin/preMeasuredQuantity/PreMeasured")
 );
@@ -75,6 +81,11 @@ function App() {
             </Route>
             <Route path="/admin">
               <Route index element={<Admin />} />
+              <Route path="users">
+                <Route index element={<AllUsers />} />
+                <Route path=":id" element={<SingleUser />} />
+              </Route>
+
               <Route
                 path="measuredquantities"
                 element={<PreMeasuredQuantities />}
